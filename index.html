@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Какой-то текст</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js'></script>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth'
+            });
+            calendar.render();
+        });
+
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <main class="main">
+            <div class="main__container">
+                <div class="adress">
+                    <div class="adress__block">
+                        <div class="adress__select select-adress">
+                            <span class="select-adress__current" data-select="adress1">м. Одеса, вул. Велика
+                                Арнаутська
+                            </span>
+                            <img src="img/arrow.svg" alt="">
+                        </div>
+                        <div class="select-adress__body">
+                            <div class="select-adress__item" data-select="adress2">м. Одеса, інша адреса</div>
+                            <div class="select-adress__item" data-select="adress1">м. Одеса, вул. Велика Арнаутська
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="option" data-givenData="" data-target="instruments"
+                    data-default="Вибрати музичний інструмент">
+                    <img src="img/arrow.svg" alt="" class="option__arrow">
+                    <div class="option__name">Вибрати музичний інструмент</div>
+                    <img src="img/delete.svg" alt="" class="option__trash">
+                </div>
+                <div class="option" data-givenData="" data-target='time' data-default="Вибрати дату і час">
+                    <img src="img/arrow.svg" alt="" class="option__arrow">
+                    <span class="option__name">Вибрати дату і час</span>
+                    <img src="img/delete.svg" alt="" class="option__trash">
+                </div>
+                <div class="option" data-givenData="" data-target='teachers' data-default="Вибрати викладача">
+                    <img src="img/arrow.svg" alt="" class="option__arrow">
+                    <span class="option__name">Вибрати викладача</span>
+                    <img src="img/delete.svg" alt="" class="option__trash">
+                </div>
+                <button class="option-button _btn">Продовжити запис</button>
+                <div class="instruments-option" id="instruments">
+                    <div class="instrument-option">
+                        <div class="instrument-option__name" data-instrument="Барабани">Барабани</div>
+                        <div class="instrument-option__name" data-instrument="Вокал">Вокал</div>
+                        <div class="instrument-option__name" data-instrument="Клавішні">Клавішні</div>
+                        <div class="instrument-option__name" data-instrument="Гітара">Гітара</div>
+                        <div class="instrument-option__name" data-instrument="Укулеле">Укулеле</div>
+                        <div class="instrument-option__name" data-instrument="Саксофон">Саксофон</div>
+                    </div>
+                </div>
+                <div class="teachers-option" id="teachers">
+                    <div class="teacher-option">
+                        <img src="img/message.svg" alt="" class="teacher-option__message">
+                        <div class="teacher-option__info teacher-info">
+                            <img src="img/avatar.png" alt="" class="teacher-info__avatar">
+                            <div class="teacher-info__names">
+                                <div class="teacher-info__name" data-teacherName="Перше Ім'я Призвище">Перше Ім'я<br />
+                                    Призвище
+                                </div>
+                                <div class="teacher-info__instrument">барабани</div>
+                            </div>
+                        </div>
+                        <div class="teacher-option__categories">
+                            <div class="teacher-option__category category-teacher">
+                                <div class="category-teacher__value checked">Для дорослих</div>
+                                <div class="category-teacher__switch">
+                                    <input type="checkbox">
+                                </div>
+                                <div class="category-teacher__value unchecked">Для дітей</div>
+                            </div>
+                            <div class="teacher-option__category category-teacher">
+                                <div class="category-teacher__value checked">Групові</div>
+                                <div class="category-teacher__switch">
+                                    <input type="checkbox">
+                                </div>
+                                <div class="category-teacher__value unchecked">Індивідуальні</div>
+                            </div>
+                        </div>
+                        <div class="teacher-option__date date-teacher">
+                            <div class="date-teacher__title">Найближчий час для запису <a href="" data-closestDate="">,
+                                    четвер</a>:
+                            </div>
+                            <div class="date-teachers__items">
+                                <div class="date-teachers__item">13:00</div>
+                                <div class="date-teachers__item">15:00</div>
+                                <div class="date-teachers__item">18:00</div>
+                                <div class="date-teachers__item">19:00</div>
+                                <div class="date-teachers__item">20:00</div>
+                                <div class="date-teachers__item calendar__item">
+                                    <img src="img/calendar.svg" alt="">
+                                    Календар
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="teacher-option">
+                        <img src="img/message.svg" alt="" class="teacher-option__message">
+                        <div class="teacher-option__info teacher-info">
+                            <img src="img/avatar.png" alt="" class="teacher-info__avatar">
+                            <div class="teacher-info__names">
+                                <div class="teacher-info__name" data-teacherName="Друге Ім'я Призвище">Друге Ім'я<br />
+                                    Призвище
+                                </div>
+                                <div class="teacher-info__instrument">барабани</div>
+                            </div>
+                        </div>
+                        <div class="teacher-option__categories">
+                            <div class="teacher-option__category category-teacher">
+                                <div class="category-teacher__value checked">Для дорослих</div>
+                                <div class="category-teacher__switch">
+                                    <input type="checkbox">
+                                </div>
+                                <div class="category-teacher__value unchecked">Для дітей</div>
+                            </div>
+                            <div class="teacher-option__category category-teacher">
+                                <div class="category-teacher__value checked">Групові</div>
+                                <div class="category-teacher__switch">
+                                    <input type="checkbox">
+                                </div>
+                                <div class="category-teacher__value unchecked">Індивідуальні</div>
+                            </div>
+                        </div>
+                        <div class="teacher-option__date date-teacher">
+                            <div class="date-teacher__title">Найближчий час для запису <a href=""
+                                    data-closestDate=""></a>:
+                            </div>
+                            <div class="date-teachers__items">
+                                <div class="date-teachers__item">13:00</div>
+                                <div class="date-teachers__item">15:00</div>
+                                <div class="date-teachers__item">18:00</div>
+                                <div class="date-teachers__item">19:00</div>
+                                <div class="date-teachers__item">20:00</div>
+                                <div class="date-teachers__item calendar__item">
+                                    <img src="img/calendar.svg" alt="">
+                                    Календар
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="teacher-option">
+                        <img src="img/message.svg" alt="" class="teacher-option__message">
+                        <div class="teacher-option__info teacher-info">
+                            <img src="img/avatar.png" alt="" class="teacher-info__avatar">
+                            <div class="teacher-info__names">
+                                <div class="teacher-info__name" data-teacherName="Третє Ім'я Призвище">Третє Ім'я<br />
+                                    Призвище
+                                </div>
+                                <div class="teacher-info__instrument">барабани</div>
+                            </div>
+                        </div>
+                        <div class="teacher-option__categories">
+                            <div class="teacher-option__category category-teacher">
+                                <div class="category-teacher__value checked">Для дорослих</div>
+                                <div class="category-teacher__switch">
+                                    <input type="checkbox">
+                                </div>
+                                <div class="category-teacher__value unchecked">Для дітей</div>
+                            </div>
+                            <div class="teacher-option__category category-teacher">
+                                <div class="category-teacher__value checked">Групові</div>
+                                <div class="category-teacher__switch">
+                                    <input type="checkbox">
+                                </div>
+                                <div class="category-teacher__value unchecked">Індивідуальні</div>
+                            </div>
+                        </div>
+                        <div class="teacher-option__date date-teacher">
+                            <div class="date-teacher__title">Найближчий час для запису <a href="" data-closestDate="">,
+                                    четвер</a>:
+                            </div>
+                            <div class="date-teachers__items">
+                                <div class="date-teachers__item">13:00</div>
+                                <div class="date-teachers__item">15:00</div>
+                                <div class="date-teachers__item">18:00</div>
+                                <div class="date-teachers__item">19:00</div>
+                                <div class="date-teachers__item">20:00</div>
+                                <div class="date-teachers__item calendar__item">
+                                    <img src="img/calendar.svg" alt="">
+                                    Календар
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="feedback">
+                    <div class="swiper feedback-slider">
+                        <div class="swiper-wrapper feedback-slider__wrapper">
+                            <div class="swiper-slide feedback-slide">
+                                <div class="feedback-slide__info slide-info">
+                                    <img src="img/avatar.png" alt="" class="slide-info__avatar">
+                                    <div class="slide-info__names">
+                                        <div class="slide-info__name" data-teacherName="Перше Ім'я Призвище">Перше
+                                            Ім'я<br />
+                                            Призвище
+                                        </div>
+                                        <div class="slide-info__instrument">барабани</div>
+                                    </div>
+                                </div>
+                                <div class="feedback-slide__comments">
+                                    <div class="feedback-slide__comment slide-comment">
+                                        <div class="slide-comment__name">Імʼя</div>
+                                        <div class="slide-comment__text">Текст відгука</div>
+                                    </div>
+                                    <div class="feedback-slide__comment slide-comment">
+                                        <div class="slide-comment__name">Імʼя</div>
+                                        <div class="slide-comment__text">Текст відгука</div>
+                                    </div>
+                                    <div class="feedback-slide__comment slide-comment">
+                                        <div class="slide-comment__name">Імʼя</div>
+                                        <div class="slide-comment__text">Текст відгука</div>
+                                    </div>
+                                </div>
+                                <button class="feedback-slide__button _btn">Ще відгуки</button>
+                            </div>
+                            <div class="swiper-slide feedback-slide">
+                                <div class="feedback-slide__info slide-info">
+                                    <img src="img/avatar.png" alt="" class="slide-info__avatar">
+                                    <div class="slide-info__names">
+                                        <div class="slide-info__name" data-teacherName="Друге Ім'я Призвище">Друге
+                                            Ім'я<br />
+                                            Призвище
+                                        </div>
+                                        <div class="slide-info__instrument">барабани</div>
+                                    </div>
+                                </div>
+                                <div class="feedback-slide__comments">
+                                    <div class="feedback-slide__comment slide-comment">
+                                        <div class="slide-comment__name">Імʼя</div>
+                                        <div class="slide-comment__text">Текст відгука</div>
+                                    </div>
+                                    <div class="feedback-slide__comment slide-comment">
+                                        <div class="slide-comment__name">Імʼя</div>
+                                        <div class="slide-comment__text">Текст відгука</div>
+                                    </div>
+                                    <div class="feedback-slide__comment slide-comment">
+                                        <div class="slide-comment__name">Імʼя</div>
+                                        <div class="slide-comment__text">Текст відгука</div>
+                                    </div>
+                                </div>
+                                <button class="feedback-slide__button _btn">Ще відгуки</button>
+                            </div>
+                            <div class="swiper-slide feedback-slide">
+                                <div class="feedback-slide__info slide-info">
+                                    <img src="img/avatar.png" alt="" class="slide-info__avatar">
+                                    <div class="slide-info__names">
+                                        <div class="slide-info__name" data-teacherName="Третє Ім'я Призвище">Третє
+                                            Ім'я<br />
+                                            Призвище
+                                        </div>
+                                        <div class="slide-info__instrument">барабани</div>
+                                    </div>
+                                </div>
+                                <div class="feedback-slide__comments">
+                                    <div class="feedback-slide__comment slide-comment">
+                                        <div class="slide-comment__name">Імʼя</div>
+                                        <div class="slide-comment__text">Текст відгука</div>
+                                    </div>
+                                    <div class="feedback-slide__comment slide-comment">
+                                        <div class="slide-comment__name">Імʼя</div>
+                                        <div class="slide-comment__text">Текст відгука</div>
+                                    </div>
+                                    <div class="feedback-slide__comment slide-comment">
+                                        <div class="slide-comment__name">Імʼя</div>
+                                        <div class="slide-comment__text">Текст відгука</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="feedback-slide__button _btn">Ще відгуки</button>
+                        </div>
+                        <img src="img/arrow.svg" class="swiper-button-prev"></img>
+                        <img src="img/arrow.svg" class="swiper-button-next"></img>
+                    </div>
+                </div>
+                <div class="calendar-option" id="time">
+                    <div class="calendar-wrapper" id="scrollable-container">
+                        <div id="nextMonth"></div>
+                        <div id="prevMonth"></div>
+                        <div id="divCal"></div>
+                    </div>
+                    <div class="calendar-option__time calendar-time _active">
+                        <div class="calendar-time__name">Ранок</div>
+                        <img src="img/arrow.svg" alt="" class="calendar-time__arrow">
+                        <div class="calendar-time__items">
+                            <div class="calendar-time__item">10:00</div>
+                            <div class="calendar-time__item">11:00</div>
+                            <div class="calendar-time__item">12:00</div>
+                        </div>
+                    </div>
+                    <div class="calendar-option__time calendar-time _active">
+                        <div class="calendar-time__name">День</div>
+                        <img src="img/arrow.svg" alt="" class="calendar-time__arrow">
+                        <div class="calendar-time__items">
+                            <div class="calendar-time__item">13:00</div>
+                            <div class="calendar-time__item">14:00</div>
+                            <div class="calendar-time__item">15:00</div>
+                        </div>
+                    </div>
+                    <div class="calendar-option__time calendar-time _active">
+                        <img src="img/arrow.svg" alt="" class="calendar-time__arrow">
+                        <div class="calendar-time__name">Вечір</div>
+                        <div class="calendar-time__items">
+                            <div class="calendar-time__item">16:00</div>
+                            <div class="calendar-time__item">17:00</div>
+                            <div class="calendar-time__item">18:00</div>
+                        </div>
+                    </div>
+                    <button class="calendar-option__button _btn">Продовжити запис</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
